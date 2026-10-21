@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "@tsconfig/bun/tsconfig.json",
+  "compilerOptions": {
+    "noUncheckedIndexedAccess": false,
+    // D138/D141: `packages/task/plugin/` es el único sitio del paquete que importa `@opencode-ai/plugin`
+    // (frontera nueva). Su exportación raíz (`PluginInput`) arrastra `@opencode-ai/sdk` (`createOpencodeClient`),
+    // que tipa contra el Fetch API estándar (`Request`, `BodyInit`, `HeadersInit`). `tsgo --noEmit` compila TODO
+    // el paquete como un solo programa con este `tsconfig` (sin referencias de proyecto), así que esos globales
+    // hacen falta aquí aunque `src/` no los use — mismo criterio que ya siguen `packages/opencode` y
+    // `packages/tui`, que también dependen de `@opencode-ai/plugin` y declaran `DOM`/`DOM.Iterable`.
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    // Fase 10, Tarea 12 (D187): `packages/task/tui/*.tsx` es el segundo borde del paquete que importa
+    // `@opencode-ai/plugin` (esta vez su ruta `/tui`) y, con ella, Solid vía `@opentui/solid`. `jsx`/
+    // `jsxImportSource` GLOBALES, no un pragma `/** @jsxImportSource */` por fichero: mismo criterio que
+    // `packages/opencode/tsconfig.json` y `packages/tui/tsconfig.json`, que fijan esto para el paquete
+    // ENTERO aunque la mayoría de sus ficheros no tengan JSX — `tsgo --noEmit` compila el paquete como un
+    // solo programa (sin referencias de proyecto), así que la opción tiene que vivir aquí para que
+    // `tui/*.tsx` compile, y no afecta a los ficheros `.ts` sin JSX.
+    "jsx": "preserve",
+    "jsxImportSource": "@opentui/solid"
+  }
+}

@@ -1,0 +1,1 @@
+# Vacío a propósito: bin/anti lo pasa a bun con --config para que no lea el bunfig.toml de la carpeta desde la que lanzas anti.

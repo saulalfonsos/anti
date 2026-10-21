@@ -1,0 +1,64 @@
+// anti (beta) — la config de anti: el lanzador (bin/anti) apunta OPENCODE_CONFIG_DIR a esta carpeta (agy/).
+// Modo normal: el traductor pasa cada mensaje a la tool `antigravity`, que lanza UNA conversación de agy con el vigilante;
+// /orquestar (en cualquier parte del mensaje) usa el orquestador de capas; /leer on|off, «lee una vez».
+{
+  "$schema": "https://opencode.ai/config.json",
+  // anti no se actualiza al OpenCode normal: eso lo cambiaría por otro programa. Las versiones de anti salen de su instalador.
+  "autoupdate": false,
+  // El proveedor del traductor (OpenRouter, OpenCode Zen u otro) lo elige el usuario en el asistente (/configurar). Sin /share, que sube
+  // la conversación a opencode.ai.
+  "share": "disabled",
+  // El modelo traductor lo elige el usuario en el onboarding (D325) y vive en ~/.config/anti/traductor.
+  // Traductor (fase 15, D316): un modelo gratis que solo habla con el usuario y pasa cada mensaje a la tool `antigravity`; el
+  // trabajo lo hace Gemini. Nemotron 3 Ultra free (Nemotron 3 Super free da 404 en OpenRouter desde el 2026-10-21).
+  "model": "{file:~/.config/anti/traductor}",
+  // Modelo para títulos/resúmenes. Sin esto OpenCode usa google/gemini-3.8-flash (de pago) y falla
+  // con "Key limit exceeded" si la key de OpenRouter tiene el límite de gasto agotado.
+  "small_model": "{file:~/.config/anti/traductor}",
+  // El agente se llama «traductor» para que el chat diga quién hizo cada cosa: «Traductor · Nemotron 3 Super» en lo que piensa
+  // y responde él, «◆ Gemini …» en lo que hace agy. build y plan de OpenCode no se usan en anti.
+  "default_agent": "traductor",
+  "agent": {
+    "build": { "disable": true },
+    "plan": { "disable": true },
+    "traductor": {
+      "description": "Pasa tus mensajes a Gemini (Antigravity) y te cuenta lo que hizo",
+      "mode": "primary",
+      "model": "{file:~/.config/anti/traductor}",
+      "prompt": "{file:./prompts/orchestrator.md}",
+      // El traductor es solo interfaz: no lee, no busca, no edita, no ejecuta nada por su cuenta. Todo el trabajo
+      // técnico pasa por la tool `antigravity` (tools/antigravity.ts), que aplica la tabla capa→modelo de
+      // tools/agy.env. "deny" quita la tool de la lista que ve el modelo (verificado con bash): solo le
+      // quedan `antigravity` y `question` (spec §4.1).
+      "permission": {
+        "edit": "deny",
+        "bash": "deny",
+        "read": "deny",
+        "glob": "deny",
+        "grep": "deny",
+        "list": "deny",
+        "lsp": "deny",
+        "skill": "deny",
+        "task": "deny",
+        "todowrite": "deny",
+        "webfetch": "deny",
+        "websearch": "deny",
+        // Fase 15 (D304): el runtime de tareas solo entra cuando el usuario lo pide (/task); el traductor no lo lanza por su cuenta.
+        "task_run": "deny",
+        "question": "allow"
+      }
+    },
+    // Acompañante de /btw (spec 2026-09-15 §5.5): el traductor explica en paralelo qué hace un agente Antigravity a
+    // partir del registro en vivo que el plugin de TUI le pasa como sistema. Sin herramientas: solo habla.
+    "btw": {
+      "mode": "subagent",
+      "model": "{file:~/.config/anti/traductor}",
+      "prompt": "{file:./prompts/btw.md}",
+      // Fix round 1 (revisión del controlador sobre 6b388ce), I3: "*": "deny" primero — sin él, cualquier
+      // tool/permiso nuevo que el host añada en el futuro (o cualquiera que esta lista olvide) le quedaría
+      // "allow" por defecto en vez de denegado; las claves explícitas de abajo son redundantes con "*" para
+      // las que ya existen hoy pero documentan la intención (spec §5.5: btw solo habla).
+      "permission": { "*": "deny", "edit": "deny", "bash": "deny", "read": "deny", "glob": "deny", "grep": "deny", "list": "deny", "lsp": "deny", "skill": "deny", "task": "deny", "todowrite": "deny", "webfetch": "deny", "websearch": "deny", "question": "deny", "antigravity": "deny" }
+    }
+  }
+}

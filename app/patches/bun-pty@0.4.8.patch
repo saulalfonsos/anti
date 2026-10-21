@@ -1,0 +1,16 @@
+diff --git a/src/terminal.ts b/src/terminal.ts
+index ec248d46a939f8a09cd669e853cefb126922c80a..a5cad6d66e2bbd57ffcdf30a1fe80471a4afd12e 100644
+--- a/src/terminal.ts
++++ b/src/terminal.ts
+@@ -172,7 +172,10 @@ export class Terminal implements IPty {
+ 		if (this.handle < 0) throw new Error("PTY spawn failed");
+ 
+ 		this._pid = lib.symbols.bun_pty_get_pid(this.handle);
+-		this._startReadLoop();
++		// Deferred to a microtask: `_startReadLoop` runs synchronously up to its first `await`, so a child that exits
++		// before the first read (a cold, slow first spawn with `sh -c "exit 4"`) fired `onExit` inside this
++		// constructor, before anyone could subscribe, and the exit was lost for good.
++		queueMicrotask(() => this._startReadLoop());
+ 	}
+ 
+ 	/* ------------- accessors ------------- */

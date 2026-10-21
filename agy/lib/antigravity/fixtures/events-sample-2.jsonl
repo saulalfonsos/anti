@@ -1,0 +1,2 @@
+{"t":"2026-09-14T10:05:00.000Z","cid":"demo-2","call":1,"type":"call_start","layer":"review","model":"gemini-3.8-flash-high","level":"normal","pro":false,"step":null,"session":"ses_demo2","cwd":"/tmp/agy-demo2","instruction":"Revisa el PR #42"}
+{"t":"2026-09-14T10:05:05.000Z","cid":"demo-2","call":1,"type":"call_end","status":"SUCCESS","advanced":false,"tokens":{"delta":500,"total":500},"seconds":{"delta":5,"total":5},"model":"gemini-3.8-flash-high","proCount":0,"notes":[],"exit":0}

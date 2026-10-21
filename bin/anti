@@ -1,0 +1,52 @@
+#!/bin/sh
+# anti para macOS y Linux: hablas con un modelo traductor gratuito y agy (Antigravity CLI) hace el trabajo, con el vigilante de
+# bucles. Lanza OpenCode desde sus fuentes (app/) con bun y la capa de agy (agy/) como OPENCODE_CONFIG_DIR; anti guarda sus
+# sesiones en ~/.local/share/anti y lo que eliges en el asistente en ~/.config/anti.
+#   anti                abre la app (la primera vez, el asistente de configuración)
+#   anti setup          el asistente otra vez (dentro de la app: /configurar)
+#   anti diagnostico    crea un .zip de diagnóstico sin datos personales (dentro de la app: /diagnostico)
+#   anti --version
+set -e
+self="$0"
+while [ -h "$self" ]; do
+  dir=$(cd "$(dirname "$self")" && pwd)
+  link=$(readlink "$self")
+  case "$link" in /*) self="$link" ;; *) self="$dir/$link" ;; esac
+done
+T=$(cd "$(dirname "$self")/.." && pwd)
+# El bun que deja install.sh (la versión de app/package.json); en un clon de desarrollo, el del PATH.
+if [ -x "$T/.bun/bun" ]; then BUN="$T/.bun/bun"; else BUN=$(command -v bun || true); fi
+[ -n "$BUN" ] || { echo "anti: falta bun. Instálalo con install.sh o desde https://bun.sh" >&2; exit 1; }
+[ -d "$T/app/node_modules" ] && [ -d "$T/agy/node_modules" ] || { echo "anti: faltan las dependencias: vuelve a ejecutar install.sh" >&2; exit 1; }
+export ANTI_HOME="$T"
+export OPENCODE_CONFIG_DIR="$T/agy"
+export PATH="$HOME/.local/bin:$PATH"
+# El servidor MCP de anti (leer, probar, abrir) desde sus fuentes.
+export AGY_ANTI_MCP="${AGY_ANTI_MCP-$T/app/packages/anti-mcp/src/main.ts}"
+export AGY_ANTI_BUN="$BUN"
+# El visor web de agy es solo de desarrollo, y nunca se «actualiza» a otra app.
+export AGY_UI=0
+export OPENCODE_DISABLE_AUTOUPDATE=1
+# Desde las fuentes OpenCode se cree del canal «local» y guardaría las sesiones en opencode-local.db: las de siempre están en
+# opencode.db (donde las dejaba la beta compilada).
+export OPENCODE_DISABLE_CHANNEL_DB=1
+
+case "${1:-}" in
+  --version|-v) echo "anti $(cat "$T/VERSION")"; exit 0 ;;
+  setup|--setup) export ANTI_ONBOARDING=force; shift ;;
+esac
+
+# Lo que elige el usuario vive fuera de $T (install.sh lo sustituye al actualizar). Lo que falte (agy, su sesión, la clave) lo
+# resuelve el asistente dentro de la app, así que aquí no se para nada.
+U="$HOME/.config/anti"
+mkdir -p "$U"
+# La config lee el traductor con {file:~/.config/anti/traductor}: tiene que existir antes de arrancar.
+[ -s "$U/traductor" ] || echo "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free" > "$U/traductor"
+if [ -z "${AGY_BIN:-}" ] && [ -s "$U/agy" ]; then export AGY_BIN="$(cat "$U/agy")"; fi
+# Sin cambiar de carpeta, para que anti abra la carpeta desde la que lo lanzas. --config: bin/bunfig.toml (vacío) en vez del
+# bunfig.toml de tu proyecto. --preload: la precarga de la TUI (la del bunfig de OpenCode) por su ruta, porque bun resuelve el nombre
+# del paquete desde la carpeta actual. --define: la versión de anti en vez de «local» (solo la versión: con otro canal, OpenCode
+# instalaría en agy/ la versión de @opencode-ai/plugin que coincide con ese número).
+O="$T/app/packages/opencode"
+exec "$BUN" --config="$T/bin/bunfig.toml" run --define "OPENCODE_VERSION=\"$(cat "$T/VERSION")\"" \
+  --preload "$O/node_modules/@opentui/solid/scripts/preload.js" "$O/src/index.ts" "$@"

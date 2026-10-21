@@ -1,0 +1,1450 @@
+{
+"origen": "p13-eval/mcp-piloto, brazo mcp, tarea 986463faebc4, conversación f1f7fdfd (231 llamadas al modelo, view_file ×82 sobre tool-core.mjs); generada desde llamadas-normalizadas.jsonl con los parámetros TAL COMO LOS DA el stream-json de agy 1.2.14 (solo el argumento principal: AbsolutePath, CommandLine o TargetFile; medido en la sonda A2.2, D300): ruta del clon → <clon>, textos > 200 caracteres → su sha1",
+"llamadas": [
+{
+"name": "call_mcp_tool",
+"parameters": {
+"Arguments": {},
+"ServerName": "anti_anti",
+"ToolName": "probar"
+}
+},
+{
+"name": "call_mcp_tool",
+"parameters": {
+"Arguments": {
+"paths": [
+"lib/antigravity/report.mjs",
+"lib/antigravity/run.mjs"
+]
+},
+"ServerName": "anti_anti",
+"ToolName": "leer"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "/home/u/.gemini/antigravity-cli/mcp/anti_anti/leer.json"
+}
+},
+{
+"name": "call_mcp_tool",
+"parameters": {
+"Arguments": {
+"ficheros": [
+{
+"ruta": "lib/antigravity/report.mjs"
+},
+{
+"ruta": "lib/antigravity/run.mjs"
+}
+]
+},
+"ServerName": "anti_anti",
+"ToolName": "leer"
+}
+},
+{
+"name": "call_mcp_tool",
+"parameters": {
+"Arguments": {
+"ficheros": [
+{
+"desde": 1,
+"hasta": 120,
+"ruta": "lib/antigravity/report.mjs"
+},
+{
+"desde": 1,
+"hasta": 120,
+"ruta": "lib/antigravity/run.mjs"
+}
+]
+},
+"ServerName": "anti_anti",
+"ToolName": "leer"
+}
+},
+{
+"name": "call_mcp_tool",
+"parameters": {
+"Arguments": {
+"ficheros": [
+{
+"desde": 1,
+"hasta": 60,
+"ruta": "package.json"
+}
+]
+},
+"ServerName": "anti_anti",
+"ToolName": "leer"
+}
+},
+{
+"name": "run_command",
+"parameters": {
+"CommandLine": "pwd && ls -la"
+}
+},
+{
+"name": "run_command",
+"parameters": {
+"CommandLine": "git grep -l \"runAntigravity\""
+}
+},
+{
+"name": "run_command",
+"parameters": {
+"CommandLine": "find lib -maxdepth 3"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "/home/u/.gemini/antigravity-cli/brain/f1f7fdfd-d74d-49ef-aecd-59047a7943a7/.system_generated/steps/8/output.txt"
+}
+},
+{
+"name": "call_mcp_tool",
+"parameters": {
+"Arguments": {
+"ficheros": [
+{
+"desde": 1,
+"hasta": 200,
+"ruta": "lib/antigravity/tool-core.mjs"
+}
+]
+},
+"ServerName": "anti_anti",
+"ToolName": "leer"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "/home/u/.gemini/antigravity-cli/brain/f1f7fdfd-d74d-49ef-aecd-59047a7943a7/.system_generated/steps/22/output.txt"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "/home/u/.gemini/antigravity-cli/brain/f1f7fdfd-d74d-49ef-aecd-59047a7943a7/.system_generated/steps/22/output.txt"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "run_command",
+"parameters": {
+"CommandLine": "git grep -n \"eventsPath\""
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/state.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tui/tail.mjs"
+}
+},
+{
+"name": "run_command",
+"parameters": {
+"CommandLine": "git grep -n \"conv=\""
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/docs/superpowers/plans/2026-09-15-antigravity-tui-plugin.md"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/docs/superpowers/plans/2026-09-15-antigravity-tui-plugin.md"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/docs/superpowers/plans/2026-09-15-antigravity-tui-plugin.md"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/report.test.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.test.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/report.mjs"
+}
+},
+{
+"name": "write_to_file",
+"parameters": {
+"TargetFile": "<clon>/lib/antigravity/tui/shortid.mjs"
+}
+},
+{
+"name": "write_to_file",
+"parameters": {
+"TargetFile": "<clon>/lib/antigravity/tui/shortid.test.mjs"
+}
+},
+{
+"name": "call_mcp_tool",
+"parameters": {
+"Arguments": {},
+"ServerName": "anti_anti",
+"ToolName": "probar"
+}
+},
+{
+"name": "replace_file_content",
+"parameters": {
+"TargetFile": "<clon>/lib/antigravity/report.mjs"
+}
+},
+{
+"name": "replace_file_content",
+"parameters": {
+"TargetFile": "<clon>/lib/antigravity/report.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "replace_file_content",
+"parameters": {
+"TargetFile": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "replace_file_content",
+"parameters": {
+"TargetFile": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "call_mcp_tool",
+"parameters": {
+"Arguments": {},
+"ServerName": "anti_anti",
+"ToolName": "probar"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.test.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/docs/superpowers/plans/2026-09-15-antigravity-tui-plugin.md"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.test.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/fixtures/agy-stub.sh"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/fixtures/agy-stub.sh"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/docs/superpowers/plans/2026-09-15-antigravity-tui-plugin.md"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.test.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/fixtures/agy-stub.sh"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.test.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/report.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/report.test.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.test.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.test.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.test.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/fixtures/agy-stub.sh"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.test.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.test.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/fixtures/agy-stub.sh"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.test.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/fixtures/agy-stub.sh"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.test.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/fixtures/agy-stub.sh"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.test.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.test.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/state.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.test.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/fixtures/agy-stub.sh"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/fixtures/agy-stub.sh"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.test.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.test.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.test.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.test.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+},
+{
+"name": "view_file",
+"parameters": {
+"AbsolutePath": "<clon>/lib/antigravity/tool-core.mjs"
+}
+}
+]
+}

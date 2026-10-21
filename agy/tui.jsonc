@@ -1,0 +1,5 @@
+{
+  "$schema": "https://opencode.ai/tui.json",
+  // Plugin de TUI de agy: chat de agy, agentes, onboarding, /agy, /configurar y /btw.
+  "plugin": ["./tui/agy/index.tsx"]
+}

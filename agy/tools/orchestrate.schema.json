@@ -1,0 +1,33 @@
+{
+  "type": "object",
+  "properties": {
+    "answer": {
+      "type": "string",
+      "description": "If no code work is needed: the complete answer for the user, in Spanish. Otherwise: a one-paragraph summary of the plan, in Spanish."
+    },
+    "needs_user_input": {
+      "type": "string",
+      "description": "A question the user must answer before any step can run. Empty string if none."
+    },
+    "deep_orchestration_reason": {
+      "type": "string",
+      "description": "Empty string normally. Non-empty ONLY if planning this request itself needs the deep-reasoning model (see escalation rules for orchestrate): cite the trigger id and one sentence."
+    },
+    "steps": {
+      "type": "array",
+      "description": "Ordered steps. Empty if `answer` fully resolves the request or if `needs_user_input` is set. As few steps as possible.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "layer": { "type": "string", "enum": ["architect", "research", "implement", "fix", "review", "verify"] },
+          "level": { "type": "string", "enum": ["light", "normal", "deep"],
+                     "description": "light = trivial (rename, one line, config value). normal = default. deep = needs the deep-reasoning model; only allowed for architect/research/review/verify and only when an escalation trigger applies." },
+          "reason": { "type": "string", "description": "Required when level is deep: the trigger id (G1..G5) and one sentence. Empty otherwise." },
+          "instruction": { "type": "string", "description": "Self-contained instruction for that layer, in Spanish: exact file paths, exact change, acceptance criteria." }
+        },
+        "required": ["layer", "level", "reason", "instruction"]
+      }
+    }
+  },
+  "required": ["answer", "needs_user_input", "deep_orchestration_reason", "steps"]
+}

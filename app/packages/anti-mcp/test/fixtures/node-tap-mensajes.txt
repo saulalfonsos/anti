@@ -1,0 +1,160 @@
+TAP version 13
+# Subtest: nombre con \# almohadilla y - guion
+not ok 1 - nombre con \# almohadilla y - guion
+  ---
+  duration_ms: 0.544625
+  type: 'test'
+  location: '/work/proj/mensajes.test.mjs:4:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    
+    1 !== 2
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 2
+  actual: 1
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///work/proj/mensajes.test.mjs:5:10)
+    Test.runInAsyncScope (node:async_hooks:226:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.start (node:internal/test_runner/test:1262:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17)
+  ...
+# Subtest: saltado
+ok 2 - saltado # SKIP no toca
+  ---
+  duration_ms: 0.052166
+  type: 'test'
+  ...
+# Subtest: pendiente
+not ok 3 - pendiente # TODO luego
+  ---
+  duration_ms: 0.063042
+  type: 'test'
+  location: '/work/proj/mensajes.test.mjs:8:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    
+    1 !== 2
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 2
+  actual: 1
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///work/proj/mensajes.test.mjs:9:10)
+    Test.runInAsyncScope (node:async_hooks:226:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: objeto distinto
+not ok 4 - objeto distinto
+  ---
+  duration_ms: 0.843958
+  type: 'test'
+  location: '/work/proj/mensajes.test.mjs:11:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    
+      {
+        a: 1,
+        b: [
+          1,
+          2,
+    +     3
+    -     4
+        ],
+    +   c: 'x'
+    -   c: 'y'
+      }
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    a: 1
+    b:
+      0: 1
+      1: 2
+      2: 4
+    c: 'y'
+  actual:
+    a: 1
+    b:
+      0: 1
+      1: 2
+      2: 3
+    c: 'x'
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///work/proj/mensajes.test.mjs:12:10)
+    Test.runInAsyncScope (node:async_hooks:226:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: con comilla simple
+not ok 5 - con comilla simple
+  ---
+  duration_ms: 0.04175
+  type: 'test'
+  location: '/work/proj/mensajes.test.mjs:14:1'
+  failureType: 'testCodeFailure'
+  error: "it's broken: ¿qué pasa?"
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    TestContext.<anonymous> (file:///work/proj/mensajes.test.mjs:15:9)
+    Test.runInAsyncScope (node:async_hooks:226:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: rechazo con dos lineas
+not ok 6 - rechazo con dos lineas
+  ---
+  duration_ms: 0.052541
+  type: 'test'
+  location: '/work/proj/mensajes.test.mjs:17:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    rechazado
+    con dos lineas
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    TestContext.<anonymous> (file:///work/proj/mensajes.test.mjs:18:24)
+    Test.runInAsyncScope (node:async_hooks:226:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: el que pasa
+ok 7 - el que pasa
+  ---
+  duration_ms: 0.031625
+  type: 'test'
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 1
+# fail 4
+# cancelled 0
+# skipped 1
+# todo 1
+# duration_ms 40.84625

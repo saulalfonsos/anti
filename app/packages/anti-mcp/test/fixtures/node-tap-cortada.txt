@@ -1,0 +1,7 @@
+TAP version 13
+# Subtest: rapido que pasa
+ok 1 - rapido que pasa
+  ---
+  duration_ms: 0.282541
+  type: 'test'
+  ...
