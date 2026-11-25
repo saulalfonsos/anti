@@ -67,6 +67,9 @@ if [ "$("$DEST/.bun/bun" --version 2>/dev/null || true)" != "$BUNV" ]; then
   chmod +x "$DEST/.bun/bun"
 fi
 BUN="$DEST/.bun/bun"
+# Los scripts de package.json llaman a «bun» por su nombre (fix-node-pty: «bun run script/fix-node-pty.ts»): sin esto usarían
+# el bun del PATH, o fallarían con «bun: command not found» si no hay ninguno instalado.
+export PATH="$DEST/.bun:$PATH"
 
 # 3. Las dependencias: solo las de OpenCode y el servidor MCP de anti (no las de la web, el escritorio ni la consola de OpenCode).
 # --ignore-scripts: los scripts de la raíz son de desarrollo (husky); el único que hace falta, el de node-pty, va aparte.
